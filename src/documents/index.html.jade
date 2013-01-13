@@ -4,13 +4,14 @@ layout: default
 pageOrder: 2
 ---
 
-each doc in getCollection('posts').toJSON()
-  article.post
-    header
-      h1
-        a(href=doc.url)= doc.title
-      p.meta
-        = doc.date.toShortDateString()
-    section.content
-      | !{helper.summary(doc.contentRenderedWithoutLayouts)}
-      a(href=doc.url) Read more &raquo;
+.blog-index
+  each doc in getCollection('posts').toJSON()
+    article.post
+      header
+        h1
+          a(href=doc.url)= doc.title
+        p.meta
+          = doc.date.toShortDateString()
+      section.content
+        | !{helper.summary(doc.contentRenderedWithoutLayouts)}
+        a.small(href=doc.url) Read more &raquo;

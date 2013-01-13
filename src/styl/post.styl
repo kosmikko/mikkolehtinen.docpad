@@ -1,12 +1,38 @@
 $metacolor = #aaa
 
-article header
-  position relative
-  margin-bottom 1.5em
-  padding-top 3em
+article
+  padding-bottom 4em
+
+  header
+    position relative
+    margin-bottom 1.5em
+    padding-top 3em
 
   .meta
     position absolute
     top 0
     text-transform uppercase
     color $metacolor
+
+.post
+  .postmeta
+    color $metacolor
+    margin-bottom: .8em
+    font-size: .85em
+    clear: both
+    overflow: hidden
+
+    date, .tags
+      padding: 0 .4em 0 .2em
+      display: inline-block
+      &:before
+        content: "\2022  "
+
+  .sharing
+    padding-top 1em
+    border-top 1px dotted #ddd
+
+.blog-index
+  article
+    border-top 1px dotted #ddd
+    padding-top 2em
