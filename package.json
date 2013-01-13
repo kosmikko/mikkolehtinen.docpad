@@ -1,0 +1,31 @@
+{
+  "name": "mikkolehtinen.com",
+  "version": "0.1.0",
+  "description": "mikkolehtinen.com blog src",
+  "author": "Mikko Lehtinen",
+  "engines": {
+    "node": "0.8.x",
+    "npm": "1.1.x"
+  },
+  "dependencies": {
+    "docpad": "6.x",
+    "docpad-plugin-cleanurls": "2.x",
+    "docpad-plugin-coffeescript": "2.x",
+    "docpad-plugin-eco": "2.x",
+    "docpad-plugin-less": "2.x",
+    "docpad-plugin-marked": "2.x",
+    "docpad-plugin-partials": "2.x",
+    "docpad-plugin-stylus": "2.x",
+    "docpad-plugin-text": "2.x",
+    "docpad-plugin-jade": "2.x",
+    "docpad-plugin-related": "2.x",
+    "marked": "*",
+    "docpad-plugin-highlightjs": "~2.1.1",
+    "lodash": "~1.0.0-rc.3",
+    "moment": "~1.7.2"
+  },
+  "devDependencies": {
+    "docpad-plugin-livereload": "2.x"
+  },
+  "main": "node_modules/docpad/bin/docpad-server"
+}

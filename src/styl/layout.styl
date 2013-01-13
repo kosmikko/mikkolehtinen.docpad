@@ -1,0 +1,29 @@
+// Grid setup
+$columns = 12
+$column-width = 60
+$gutter-width = 20
+$total-width = 100%
+
+// Layout
+#maincolumn
+  column(9)
+
+#sidebar
+  column(3)
+
+header.logo
+  column(12)
+  padding 0.5em 0.5em 0.5em 0
+  h1
+    font-size 20px
+
+body
+  margin 0 auto
+  max-width 1200px
+
+@media screen and (max-width: 720px)
+  #maincolumn,
+  #sidebar
+    column(12)
+    margin-bottom: 1em
+

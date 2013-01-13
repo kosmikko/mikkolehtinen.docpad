@@ -1,0 +1,50 @@
+@import '_variables'
+@import '_mixins'
+
+body
+  font-family $font-main
+  line-height 1.5em
+  font-size 18px
+  color $text-color
+
+h1, h2, h3, h4, h5, h6
+  text-rendering: optimizelegibility
+  margin-bottom: 1em
+  font-weight: bold
+
+h1
+  font-size 2.5em
+  a
+    text-decoration: none
+    color: $text-color
+    &:visited
+      color $text-color
+
+    &:hover
+      color #0181eb
+      text-decoration underline
+
+h2
+  font-size: 1.5em
+
+a
+  link-colors($link-color, $link-color-hover, $link-color-active, $link-color-visited, $link-color-active)
+
+article h2
+  padding-top: 0.8em;
+  border-top 1px dotted #ddd
+
+p, blockquote, ul, ol
+  margin-bottom: 1.5em
+
+em, dfn
+  font-style: italic
+
+.meta
+  font-family $font-sans
+  font-size .9em
+
+pre.highlighted
+  font-family $font-monospace
+  font-size 0.8em
+  margin-bottom 1.5em

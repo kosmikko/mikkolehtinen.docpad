@@ -1,0 +1,11 @@
+---
+layout:  default
+---
+article.post
+  header
+    h1
+      a(href=document.url)= document.title
+    p.meta
+      = document.date.toShortDateString()
+  .page-content!= content
+

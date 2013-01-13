@@ -1,0 +1,73 @@
+- var scripts = getBlock('scripts')
+- var styles = getBlock('styles')
+
+//- Prettify Syntax Highlighting
+- scripts.add(["/vendor/prettify.js"])
+- styles.add(["/vendor/prettify.css"])
+- styles.add(["/styles/monokai.css"])
+
+//- jQuery
+- scripts.add(["/vendor/jquery.js"])
+
+//- Bootstrap
+- scripts.add(["/vendor/twitter-bootstrap/js/bootstrap.js"])
+- styles.add(["/vendor/twitter-bootstrap/css/bootstrap.css","/vendor/twitter-bootstrap/css/bootstrap-responsive.css"])
+
+//- Other Scripts
+- scripts.add(["/vendor/log.js","/vendor/modernizr.js"])
+
+//- User
+- styles.add(["/styles/main.css"])
+- scripts.add(["/scripts/script.js"])
+
+doctype 5
+html(lang="en")
+  head
+
+    // Meta
+    meta(charset="utf-8")
+    meta(http-equiv="content-type", content="text/html; charset=utf-8")
+
+    //- Our site title and description
+    title= getPreparedTitle()
+    meta(name="description", content=getPreparedDescription())
+    meta(name="keywords", content=getPreparedKeywords())
+    meta(name="author", content=site.author || '')
+
+    //- Output DocPad produced meta elements
+    != getBlock('meta').toHTML()
+
+    //- Mobile viewport optimized: h5bp.com/viewport
+    meta(name="viewport", content="width=device-width")
+
+    // Icons
+    link(rel="shortcut icon", href="ico/favicon.ico")
+
+    //- Shims: IE6-8 support of HTML5 elements
+    //if lt IE 9
+      script(async src="http://html5shim.googlecode.com/svn/trunk/html5.js")
+
+    // Styles
+    != styles.toHTML()
+    link(rel='stylesheet', href='http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic', type='text/css')
+    link(rel='stylesheet', href='http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic', type='text/css')
+
+  body
+    header.logo
+      hgroup
+        h1
+          a(href='/') mikkolehtinen.com
+
+    article#maincolumn
+      section#content.content!= content
+
+    aside#sidebar
+      section#recent-posts
+          h2 Recent posts
+          ul
+            each doc in getCollection('posts').toJSON()
+              li
+                a(href=doc.url)= doc.title
+
+    // Scripts
+    != scripts.toHTML()
