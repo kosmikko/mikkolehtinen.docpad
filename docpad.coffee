@@ -14,7 +14,7 @@ docpadConfig =
     # Specify some site properties
     site:
       # The production url of our website
-      url: "http://website.com"
+      url: "http://www.mikkolehtinen.com"
 
       # Here are some old site urls that you would like to redirect from
       oldUrls: [
@@ -23,7 +23,7 @@ docpadConfig =
       ]
 
       # The default title of our website
-      title: "Your Website"
+      title: "mikkolehtinen.com"
 
       # The website description (for SEO)
       description: """
@@ -36,13 +36,10 @@ docpadConfig =
         """
 
       # The website author's name
-      author: "Your Name"
-
-      # The website author's email
-      email: "your@email.com"
+      author: "Mikko Lehtinen"
 
       # Your company's name
-      copyright: "© Your Company 2012"
+      copyright: "© Mikko Lehtinen 2013"
 
 
     # Helper Functions
@@ -102,7 +99,9 @@ docpadConfig =
 
     # This one, will fetch in all documents that have the tag "post" specified in their meta data
     posts: (database) ->
-      database.findAllLive({relativeOutDirPath:'posts'},[date:-1])
+      posts = database.findAllLive({relativeOutDirPath:'posts'},[date:-1])
+      console.log posts
+      posts
 
 
   # DocPad Events
