@@ -2,7 +2,7 @@
 layout: post
 title: "Using GNU Make as a frontend build tool"
 date: 2012-07-10 18:24
-comments: true
+url: '/blog/2012/07/10/using-gnu-make-as-frontend-build-tool/'
 categories: 
 ---
 There seems to be hundreds of language specific build tools for everyone's needs, and somehow I feel that wasted energy could be spent on building more useful things. Often a small [Makefile](http://en.wikipedia.org/wiki/Make_(software\)) is all that you need. 'make' may seem like complicated tool at first but learning the basics is quick and highly recommended.

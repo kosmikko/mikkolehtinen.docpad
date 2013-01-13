@@ -19,10 +19,11 @@
     "docpad-plugin-text": "2.x",
     "docpad-plugin-jade": "2.x",
     "docpad-plugin-related": "2.x",
+    "docpad-plugin-highlightjs": "2.x",
     "marked": "*",
-    "docpad-plugin-highlightjs": "~2.1.1",
-    "lodash": "~1.0.0-rc.3",
-    "moment": "~1.7.2"
+    "lodash": "1.0.x",
+    "moment": "1.7.2",
+    "docpad-plugin-feedr": "~2.4.0"
   },
   "devDependencies": {
     "docpad-plugin-livereload": "2.x"

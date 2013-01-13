@@ -88,6 +88,14 @@ docpadConfig =
           """<a href="/site/tagmap.html##{name.toLowerCase()}" class="tag">#{name}</a>"""
         ).join ' '
 
+  # Plugins ====
+  plugins:
+    feedr:
+        feeds:
+            twitter:
+                url: "https://api.twitter.com/1/statuses/user_timeline.json?screen_name=kosmikko&count=5&include_entities=true&include_rts=true"
+
+
   # Collections
   # ===========
   # These are special collections that our website makes available to us
@@ -99,8 +107,7 @@ docpadConfig =
 
     # This one, will fetch in all documents that have the tag "post" specified in their meta data
     posts: (database) ->
-      posts = database.findAllLive({relativeOutDirPath:'posts'},[date:-1])
-      console.log posts
+      posts = database.findAllLive({relativeOutDirPath:'blog'},[date:-1])
       posts
 
 

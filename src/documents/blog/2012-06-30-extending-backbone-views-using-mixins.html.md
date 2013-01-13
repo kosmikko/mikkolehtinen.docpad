@@ -2,7 +2,7 @@
 layout: post
 title: "Extending Backbone views using mixins"
 date: 2012-06-30 17:29
-comments: true
+url: '/blog/2012/06/30/extending-backbone-views-using-mixins/'
 categories: 
 ---
 Sometimes you'd like to have shared methods across classes, but it's not possible or it doesn't seem natural to create a shared parent class. CoffeeScript and Underscore make it fairly painless to create reusable patterns for your classes using [mixins](http://en.wikipedia.org/wiki/Mixin).   

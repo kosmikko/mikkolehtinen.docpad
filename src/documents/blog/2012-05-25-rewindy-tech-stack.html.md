@@ -3,7 +3,8 @@ layout: post
 title: "Rewindy tech stack"
 date: 2012-05-25 21:16
 comments: true
-categories: Backbone.js Python HTML5 JavaScript CoffeeScript
+url: '/blog/2012/05/25/rewindy-tech-stack/'
+tags: ['Backbone.js', 'Python', 'HTML5', 'JavaScript', 'CoffeeScript']
 ---
 I haven't seen too many [good](http://blog.fogcreek.com/the-trello-tech-stack/) blog posts on how to build architecture for a modern, frontend-heavy HTML5 app, so I thought I'd try to explain our stack while choices are still fresh in memory. We are just [getting started](http://www.rewindy.com) (just started private alpha) so things will still change and evolve.
 

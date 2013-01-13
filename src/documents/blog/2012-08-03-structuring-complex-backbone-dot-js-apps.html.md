@@ -2,6 +2,7 @@
 layout: post
 title: "Structuring complex Backbone.js apps"
 date: 2012-08-03 16:45
+url: '/blog/2012/08/03/structuring-complex-backbone-dot-js-apps/'
 tags: ['Backbone.js', 'JavaScript', 'Architecture']
 ---
 Building a more complex  JavaScript app can easily get out of hand if no effort is put into architecturing the application.  In this post I'm overviewing some of the most common higher level architectural patterns and concerns that you should consider when building modular single page apps using Backbone.js.
