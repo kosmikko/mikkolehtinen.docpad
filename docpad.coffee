@@ -27,12 +27,12 @@ docpadConfig =
 
       # The website description (for SEO)
       description: """
-        When your website appears in search results in say Google, the text here will be shown underneath your website's title.
-        """
+      Mikko Lehtinen | @kosmikko · Technical Blog on JavaScript, Backbone.js, Node.js, Python, etc.
+      """
 
       # The website keywords (for SEO) separated by commas
       keywords: """
-        place, your, website, keywoards, here, keep, them, related, to, the, content, of, your, website
+        javascript,backbonejs,python
         """
 
       # The website author's name
