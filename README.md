@@ -1,5 +1,7 @@
 # mikkolehtinen.com source
 
-## Generate output
+## Quick start
 
-    docpad generate --env static
+    npm install .
+    make run
+

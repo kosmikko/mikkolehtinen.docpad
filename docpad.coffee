@@ -41,6 +41,7 @@ docpadConfig =
       # Your company's name
       copyright: "© Mikko Lehtinen 2013"
 
+      google_analytics_tracking_id: "UA-18743700-1"
 
     # Helper Functions
     # ----------------
