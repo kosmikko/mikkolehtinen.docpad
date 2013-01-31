@@ -104,24 +104,31 @@ As you see we are generating both cobertura report and html report. Html report 
 
 ![Coverage](</blogimages/coverage.png>)
 
+Here you can see an example of code file with untested lines marked with red. Quite nice way to see where you should add more tests.
+
 ## Static code analysis & style check
 
 We want to use JSHint to check our code for errors and style. We are running JSHint before our unit tests run, so in case of error it's spotted on unit testing build step. You can also view JSHint results in Jenkins using *Report violations* plugin with:
 
+``` cmake
+lint-report:
 	$(BIN)/jshint --config $(JSHINT_CONFIG) \
 		--jslint-reporter \
 		$(SRC_FILES) \
 		> reports/jslint.xml || true
+```
 
 This is best done as a separate build step, where you call above makefile target and then create a post-build step with *Report violations* plugin and put the jslint pattern in place.
 
 You can also check style with:
 
+``` cmake
+style-report:
 	$(BIN)/jshint --config $(JSHINT_CONFIG) \
 		--checkstyle-reporter \
 		$(SRC_FILES) \
 		> reports/checkstyle-jshint.xml || true
-		
+```		
 And view reports with *Publish Checkstyle analysis results* post-build step.
 
 ## Publishing custom images
@@ -159,4 +166,4 @@ We have the following jobs:
 ####deploy-api
 - deploys backend API code to test server after GitHub commit
 
-There's no bi-directional dependencies in our case so if API code gets changed, it doesn't trigger test flow for client code. It would be possible to add this in similar way though, if needed.
+There's no bi-directional dependencies yet so if API code gets changed, it doesn't trigger test flow for client code. It would be easy to add this in similar way.
